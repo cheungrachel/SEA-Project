@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset = "UTF-8">
+    <meta http-equiv = "X-UA-Compatible" content = "IE=edge"
+    <meta name = "viewport" content = "with-device-width, intitial-scale=1.0">
+    <title> Where Art Begins</title>
+    <!-- <meta name="description" content="A Catalog of Shows Set in Los Angeles"> -->
+    <link rel="stylesheet" href="style.css" /> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- <!-- <script type="text/javascript" src="scripts.js"></script>  -->
+</head>
+
+<body>
+    <section class = "searchHeader">
+        <nav>
+            <!-- <a href="index.html"><img src="images/logo.png"> </a> -->
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="search.html">SEARCH</a>
+                    <li><a href="contact.html">CONTACT US</a>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+     </section>   
+
+<!-- --------begin filter------- -->
+<section class = searchBody>
+    <div class="container">
+        <form class="filter">
+            <div class="item">
+                <label>Category</label>
+                <select name="category">
+                    <option value="">---</option>
+                    <option value="Watercolor">Watercolor</option>
+                    <option value="Oil Painting">Oil Painting</option>
+                    <option value="Photography">Photography</option>
+                    <option value="Themed Graphics">Themed Graphics</option>
+                </select>
+            </div>
+            <div class="item">
+                <label>Name</label>
+                <input name="name" type="text">
+            </div>
+            <div class="item">
+                <label>Min Price</label>
+                <input name="minPrice" type="number">
+            </div>
+            <div class="item">
+                <label>Max Price</label>
+                <input name="maxPrice" type="number">
+            </div>
+            <div class="item submit">
+                <button>Search</button>
+            </div>
+        </form>
+
+        <div id="list">
+            <!-- Water color art data -->
+            <div class="item">
+                <img src="images/watercolor 1.jpeg">
+                <div class = "titleArt">Water Color: Boat</div>
+                <div class = "price">$20.00</div>
+            </div>
+
+            <div class="item">
+                <img src="images/watercolor 2.jpeg">
+                <div class = "titleArt">Water Color: Flowers</div>
+                <div class = "price">$25.00</div>
+            </div>
+
+            <div class="item">
+                <img src="images/watercolor 3.jpeg">
+                <div class = "titleArt">Water Color: House and Trees</div>
+                <div class = "price">$15.00</div>
+            </div>
+
+            <div class="item">
+                <img src="images/watercolor 4.jpeg">
+                <div class = "titleArt">Water Color: Dog</div>
+                <div class = "price">$23.00</div>
+            </div>
+
+            <div class="item">
+                <img src="images/watercolor 5.jpeg">
+                <div class = "titleArt">Water Color: Italy</div>
+                <div class = "price">$20.00</div>
+            </div>
+
+            <div class="item">
+                <img src="images/watercolor 6.jpeg">
+                <div class = "titleArt">Water Color: Florence</div>
+                <div class = "price">$22.00</div>
+            </div>
+
+                        <!-- Oil painting art data -->
+            <div class="item">
+                <img src="images/oil painting 1.jpeg">
+                <div class = "titleArt">Oil painting: Lollipop</div>
+                <div class = "price">$20.00</div>
+            </div>
+
+            <div class="item">
+                <img src="images/oil painting 2.jpeg">
+                <div class = "titleArt">Oil painting: Fields</div>
+                <div class = "price">$10.00</div>
+            </div>
+
+            <div class="item">
+                <img src="images/oil painting 3.jpeg">
+                <div class = "titleArt">Oil painting: Fruit</div>
+                <div class = "price">$20.00</div>
+            </div>
+
+             
+                        <!-- Oil painting art data -->
+            <div class="item">
+                <img src="images/photo1.jpeg">
+                <div class = "titleArt">Photography: Beautiful Day</div>
+                <div class = "price">$20.00</div>
+            </div>
+
+            <div class="item">
+                <img src="images/photo2.jpeg">
+                <div class = "titleArt">Photography: Shopping Galore</div>
+                <div class = "price">$10.00</div>
+            </div>
+
+            <div class="item">
+                <img src="images/photo3.jpeg">
+                <div class = "titleArt">Photography: Fish</div>
+                <div class = "price">$20.00</div>
+            </div>
+
+            <div class="item">
+                <img src="images/photo4.jpeg">
+                <div class = "titleArt">Photography: Through a Window</div>
+                <div class = "price">$20.00</div>
+            </div>
+
+           <!-- Graphic design art data -->
+           <div class="item">
+                <img src="images/themed 1.jpeg">
+                <div class = "titleArt">Graphic Design: Snoopy</div>
+                <div class = "price">$20.00</div>
+            </div>
+
+            <div class="item">
+                <img src="images/themed 2.jpeg">
+                <div class = "titleArt">Graphic Design: Toy Story</div>
+                <div class = "price">$20.00</div>
+            </div>
+
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</section>
+
+<!-- ----FOOTER---- -->
+<section class="footer">
+    <h4>
+        About Us
+    </h4>
+    <p> This is an unofficial art catalog website made by Rachel Cheung </p>
+</section>
+</body>
+
+<script>
+    // functions to close and open menu in javascript
+    var navLinks = document.getElementById("navLinks")
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+    function hideMenu(){
+        navLinks.style.right = "-200px";
+    }
+</script>
+
+
+</body>
+</html>
