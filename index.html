@@ -2,38 +2,171 @@
 <html>
 
 <head>
-    <title>LA TV Shows | Home</title>
-    <meta name="description" content="A Catalog of Shows Set in Los Angeles">
-    <link rel="stylesheet" href="style.css" />
-    <script type="text/javascript" src="scripts.js"></script>
+    <meta name = "viewport" content = "with-device-width, intitial-scale=1.0">
+    <title> Where Art Begins</title>
+    <!-- <meta name="description" content="A Catalog of Shows Set in Los Angeles"> -->
+    <link rel="stylesheet" href="style.css" /> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- <!-- <script type="text/javascript" src="scripts.js"></script>  -->
 </head>
 
 <body>
-    <header class="main-header">
-        <h1 class="title">LA TV Shows</h1>
-    </header>
-    <div id="card-container">
-        
-    </div>
-    <div class="card" style="display: none;">
-        <div class="card-content">
-            <h2>TV Show Title</h2>
-            <img src="" alt="TV Show Poster">
+<section class = "header">
+    <nav>
+        <!-- <a href="index.html"><img src="images/logo.png"> </a> -->
+        <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
             <ul>
-                <li>Bullet Point 1</li>
-                <li>Bullet Point 2</li>
-                <li>Bullet Point 3</li>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="">SEARCH</a>
+                <li><a href="contact.html">CONTACT US</a>
             </ul>
         </div>
-    </div>
-    <div class="footer">
-        <button onclick="quoteAlert();">
-            Get A Quote!
-        </button>
-        <button onclick="removeLastCard();">
-            Remove A Card!
-        </button>
-    </div>
-</body>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
 
+<div class="text-box">
+    <h1> CURATED ART </h1>
+    <p>Welcome to Curated Art! Whether you're drawn to the delicate beauty of watercolors, 
+        the captivating realism of photography, the rich textures of oil paintings, or the 
+        thematic allure of prints, Curated Art has something for every art lover. Our 
+        collection is carefully curated to spark creativity and evoke emotion, showcasing 
+        works that inspire and enrich the soul. Dive into our gallery and discover art that 
+        speaks to you, transforming your space and enhancing your life with beauty and meaning.</p>
+    <a href="" class="hero-btn"> Visit us to know more</a>
+</div>    
+
+</section>
+
+<!-- WHITE AREA OF MAIN PAGE -->
+<section class="course">
+    <h1>
+        Artwork we sell
+        <p> When it comes to artwork, we know what is important. Here are some of the pieces we have for you!</p>
+        <div class="row">
+            <div class="course-col">
+                <h3> Water Colors</h3>
+                <p>
+                    Beautiful watercolor paintings captivate with their ethereal blend of colors, creating delicate and mesmerizing scenes that evoke a sense of tranquility and wonder.
+                </p>
+            </div>
+
+            <div class="course-col">
+                <h3> Graphic Design </h3>
+                <p>
+                    Themed graphic designs infuse familiar characters or concepts like movie themes, Snoopy, or Mickey Mouse into creative visuals, adding a playful and nostalgic charm to the artwork.
+                </p>
+            </div>
+
+            <div class="course-col">
+                <h3> Photos </h3>
+                <p>
+                    Photography, such as street photography, captures candid moments and raw emotions, revealing the beauty and authenticity of everyday life in a compelling and unscripted manner.
+                </p>
+            </div>
+
+        </div>
+    </h1>
+</section>
+
+<section class="pictures">
+    <h1>A Sneak Peek</h1>
+    <div class="row">
+        <!-- watercolor pic -->
+        <div class="pictures-col">
+            <img src="images/watercolor 7.jpg">
+            <div class="layer">
+                <h3>WATER COLOR</h3>
+            </div>
+        </div>
+        <!-- graphic design pic -->
+        <div class="pictures-col">
+            <img src="images/themed 2.jpeg">
+            <div class="layer">
+                <h3>GRAPHIC DESIGN</h3>
+            </div>
+        </div>
+        <!-- picture  -->
+        <div class="pictures-col">
+            <img src="images/photo9.jpeg">
+            <div class="layer">
+                <h3>PHOTOGRAPHY</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ----testimonials---- -->
+<section class="reviews">
+    <h1>What Previous Customers Have Said</h1>
+    <p>Check out what purchasers on our website have said about their favorite pieces!</p>
+    <div class="row">
+        <!-- first user -->
+        <div class="reviews-col">
+            <img src="images/user1.jpeg">
+            <div>
+                <p>I am thrilled with my purchase of this beautiful watercolor 
+                    painting for my home decor. The shipping was incredibly fast, 
+                    and the pigmentation is stunning, adding a vibrant touch to 
+                    my living space.</p>
+                <h3> Martha Brown </h3>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o"></i>
+            </div>
+        </div>
+        <!-- second user -->
+        <div class="reviews-col">
+            <img src="images/user2.jpeg">
+            <div>
+                <p>I am delighted with my purchase of this graphic design art piece 
+                    featuring Snoopy, as it brings back fond memories of my childhood. 
+                    Snoopy has always held a special place in my heart, and I am 
+                    thrilled to have this piece in my collection.</p>
+                <h3> John Doe </h3>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-half-o"></i>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ---- bgoqwbbvwbr ---- -->
+<section class = "contact">
+    <h1>
+        Contact Us for<br>Commissioned Art Pieces
+    </h1>
+    <a href="" class="heroBottom-btn">CONTACT US</a>
+</section>
+
+<!-- ----FOOTER---- -->
+<section class="footer">
+    <h4>
+        About Us
+    </h4>
+    <p> This is an unofficial art catalog website made by Rachel Cheung </p>
+</section>
+
+<script>
+    // functions to close and open menu in javascript
+    var navLinks = document.getElementById("navLinks")
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+    function hideMenu(){
+        navLinks.style.right = "-200px";
+    }
+</script>
+
+</body>
 </html>
