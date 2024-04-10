@@ -24,71 +24,222 @@
  */
 
 
-const FRESH_PRINCE_URL = "https://upload.wikimedia.org/wikipedia/en/3/33/Fresh_Prince_S1_DVD.jpg";
-const CURB_POSTER_URL = "https://m.media-amazon.com/images/M/MV5BZDY1ZGM4OGItMWMyNS00MDAyLWE2Y2MtZTFhMTU0MGI5ZDFlXkEyXkFqcGdeQXVyMDc5ODIzMw@@._V1_FMjpg_UX1000_.jpg";
-const EAST_LOS_HIGH_POSTER_URL = "https://static.wikia.nocookie.net/hulu/images/6/64/East_Los_High.jpg";
-
-// This is an array of strings (TV show titles)
-let titles = [
-    "Fresh Prince of Bel Air",
-    "Curb Your Enthusiasm",
-    "East Los High"
+let list = document.getElementById('list');
+let filter = document.querySelector('.filter');
+let count = document.getElementById('count');
+let listProducts = [
+    {
+        id: 1,
+        name: 'Water Color: Boat',
+        price: 20,
+        quantity: 1,
+        image: 'images/watercolor 1.jpeg',
+        nature: {
+            type: 'Watercolor'
+        }
+    },
+    {
+        id: 2,
+        name: 'Water Color: Flowers',
+        price: 25,
+        quantity: 1,
+        image: 'images/watercolor 2.jpeg',
+        nature: {
+            type: 'Watercolor'
+        }
+    },
+    {
+        id: 3,
+        name: 'Water Color: House and Trees',
+        price: 15,
+        quantity: 1,
+        image: 'images/watercolor 3.jpeg',
+        nature: {
+            type: 'Watercolor'
+        }
+    },
+    {
+        id: 4,
+        name: 'Water Color: Dog',
+        price: 23,
+        quantiy: 1,
+        image: 'images/watercolor 4.jpeg',
+        nature: {
+            type: 'Watercolor'
+        }
+    },
+    {
+        id: 5,
+        name: 'Water Color: Italy',
+        price: 20,
+        quantiy: 1,
+        image: 'images/watercolor 5.jpeg',
+        nature: {
+            type: 'Watercolor'
+        }
+    },
+    {
+        id: 6,
+        name: 'Water Color: Florence',
+        price: 20,
+        quantiy: 1,
+        image: 'images/watercolor 5.jpeg',
+        nature: {
+            type: 'Watercolor'
+        }
+    },
+    {
+        id: 7,
+        name: 'Oil Color Painting: Lollipop',
+        price: 20,
+        quantiy: 1,
+        image: 'images/oil painting 1.jpeg',
+        nature: {
+            type: 'Oil Painting'
+        }
+    },
+    {
+        id: 8,
+        name: 'Oil Color Painting: Fields',
+        price: 10,
+        quantiy: 1,
+        image: 'images/oil painting 2.jpeg',
+        nature: {
+            type: 'Oil Painting'
+        }
+    },
+    {
+        id: 9,
+        name: 'Oil Color Painting: Fruit',
+        price: 20,
+        quantiy: 1,
+        image: 'images/oil painting 3.jpeg',
+        nature: {
+            type: 'Oil Painting'
+        }
+    },
+    {
+        id: 10,
+        name: 'Photography: Beautiful Day',
+        price: 20,
+        quantiy: 1,
+        image: 'images/photo1.jpeg',
+        nature: {
+            type: 'Photography'
+        }
+    },
+    {
+        id: 11,
+        name: 'Photography: Shopping Galore',
+        price: 20,
+        quantiy: 1,
+        image: 'images/photo2.jpeg',
+        nature: {
+            type: 'Photography'
+        }
+    },
+    {
+        id: 12,
+        name: 'Photography: Fish',
+        price: 20,
+        quantiy: 1,
+        image: 'images/photo3.jpeg',
+        nature: {
+            type: 'Photography'
+        }
+    },
+    {
+        id: 13,
+        name: 'Photography: Through a Window',
+        price: 20,
+        quantiy: 1,
+        image: 'images/photo4.jpeg',
+        nature: {
+            type: 'Photography'
+        }
+    },
+    {
+        id: 14,
+        name: 'Graphic Design: Snoopy',
+        price: 20,
+        quantiy: 1,
+        image: 'images/themed 1.jpeg',
+        nature: {
+            type: 'Themed Graphics'
+        }
+    },
+    {
+        id: 15,
+        name: 'Graphic Design: Toy Story',
+        price: 20,
+        quantiy: 1,
+        image: 'images/themed 2.jpeg',
+        nature: {
+            type: 'Themed Graphics'
+        }
+    },
 ];
-// Your final submission should have much more data than this, and 
-// you should use more than just an array of strings to store it all.
+let productFilter = listProducts;
+showProduct(productFilter);
 
+function showProduct(productFilter){
+    list.innerHTML = '';
+    productFilter.forEach(item => {
+        let newItem = document.createElement('div');
+        newItem.classList.add('item');
 
-// This function adds cards the page to display the data in the array
-function showCards() {
-    const cardContainer = document.getElementById("card-container");
-    cardContainer.innerHTML = "";
-    const templateCard = document.querySelector(".card");
-    
-    for (let i = 0; i < titles.length; i++) {
-        let title = titles[i];
+        // create image
+        let newImage = new Image();
+        newImage.src = item.image;
+        newItem.appendChild(newImage);
+        // create name product
+        let newTitle = document.createElement('div');
+        newTitle.classList.add('title');
+        newTitle.innerText = item.name;
+        newItem.appendChild(newTitle);
+        // create price
+        let newPrice = document.createElement('div');
+        newPrice.classList.add('price');
+        newPrice.innerText = '$' + item.price.toLocaleString() + '.00';
+        newItem.appendChild(newPrice);
 
-        // This part of the code doesn't scale very well! After you add your
-        // own data, you'll need to do something totally different here.
-        let imageURL = "";
-        if (i == 0) {
-            imageURL = FRESH_PRINCE_URL;
-        } else if (i == 1) {
-            imageURL = CURB_POSTER_URL;
-        } else if (i == 2) {
-            imageURL = EAST_LOS_HIGH_POSTER_URL;
+        list.appendChild(newItem);
+    });
+}
+
+filter.addEventListener('submit', function(event){
+    event.preventDefault();
+    let valueFilter = event.target.elements;
+
+    productFilter = listProducts.filter(item => {
+        // check category
+        if(valueFilter.category.value != ''){
+            if(item.nature.type != valueFilter.category.value){
+                return false;
+            }
+        }
+        // check name
+        if(valueFilter.name.value != ''){
+            if(!item.name.includes(valueFilter.name.value)){
+                return false;
+            }
+        }
+        // check min price
+        if(valueFilter.minPrice.value != ''){
+            if(item.price < valueFilter.minPrice.value){
+                return false;
+            }
+        }
+        // check max price
+        if(valueFilter.maxPrice.value != ''){
+            if(item.price > valueFilter.maxPrice.value){
+                return false;
+            }
         }
 
-        const nextCard = templateCard.cloneNode(true); // Copy the template card
-        editCardContent(nextCard, title, imageURL); // Edit title and image
-        cardContainer.appendChild(nextCard); // Add new card to the container
-    }
-}
+        return true;
+    });
 
-function editCardContent(card, newTitle, newImageURL) {
-    card.style.display = "block";
-
-    const cardHeader = card.querySelector("h2");
-    cardHeader.textContent = newTitle;
-
-    const cardImage = card.querySelector("img");
-    cardImage.src = newImageURL;
-    cardImage.alt = newTitle + " Poster";
-
-    // You can use console.log to help you debug!
-    // View the output by right clicking on your website,
-    // select "Inspect", then click on the "Console" tab
-    console.log("new card:", newTitle, "- html: ", card);
-}
-
-// This calls the addCards() function when the page is first loaded
-document.addEventListener("DOMContentLoaded", showCards);
-
-function quoteAlert() {
-    console.log("Button Clicked!")
-    alert("I guess I can kiss heaven goodbye, because it got to be a sin to look this good!");
-}
-
-function removeLastCard() {
-    titles.pop(); // Remove last item in titles array
-    showCards(); // Call showCards again to refresh
-}
+    console.log('Filtered Products:', productFilter); // Log the filtered products
+    showProduct(productFilter);
+});
